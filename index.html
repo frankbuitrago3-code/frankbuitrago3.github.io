@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Embobinados J.C - Soluciones Eléctricas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="container header-container">
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="container hero-content">
+      <h1>Embobinados J.C.</h1>
+      <p>Soluciones eléctricas que impulsan tu productividad ⚡</p>
+      <p>Especialistas en embobinado, diagnóstico y reparación de motores eléctricos industriales y comerciales.</p>
+      <div class="hero-buttons">
+        <a href="#contacto" class="btn-primary">Solicitar presupuesto</a>
+        <a href="#servicios" class="btn-secondary">Ver servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS -->
+  <section id="nosotros" class="section-white">
+    <div class="container text-center">
+      <h2>Sobre nosotros</h2>
+      <p>
+        En <strong>Embobinados J.C.</strong> nos dedicamos con pasión al diagnóstico, reparación y embobinado de motores eléctricos. 
+        Con más de 10 años de experiencia, ofrecemos soluciones confiables para industrias, comercios y particulares. 
+        Nuestro compromiso es brindar atención personalizada, precisión técnica y resultados duraderos.
+      </p>
+      <p>
+        Trabajamos con materiales certificados, herramientas especializadas y un equipo humano que entiende la importancia de cada detalle.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="section-gray">
+    <div class="container text-center">
+      <h2>Nuestros servicios especializados</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">🔧</div>
+          <h3>Embobinado profesional</h3>
+          <p>Rebobinado de motores monofásicos y trifásicos con materiales certificados y precisión técnica.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">💧</div>
+          <h3>Reparación de bombas</h3>
+          <p>Servicio técnico para bombas eléctricas, generadores y equipos industriales de alto rendimiento.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🧠</div>
+          <h3>Diagnóstico y mantenimiento</h3>
+          <p>Evaluación completa de tus equipos y mantenimiento preventivo para evitar futuras fallas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria" class="section-white">
+    <div class="container text-center">
+      <h2>Galería de trabajos</h2>
+      <div class="gallery-grid">
+        <img src="motor-dañado.jpg" alt="motor dañado" onclick="openModal(this)">
+        <img src="motor-reparado.jpg" alt="Motor reparado" onclick="openModal(this)">
+        <video controls>
+          <source src="video-trabajo.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL PARA IMÁGENES -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section-blue">
+    <div class="container text-center">
+      <h2>Contacto</h2>
+      <p>¿Necesitas una cotización o más información? Escríbenos y te responderemos pronto.</p>
+      <p><strong>📍 Dirección:</strong> Coloncito, Municipio Panamericano, entre calle 11 y 12, a una cuadra de la Panamericana</p>
+      <p><strong>📞 WhatsApp:</strong> <a href="https://wa.me/584247325242" target="_blank">+58 0424 732 5242</a></p>
+      
+      <form action="mailto:embobinadosjc@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo electrónico" required />
+        <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+        <button type="submit" class="btn-primary">Enviar mensaje</button>
+      </form>
+
+      <div class="mt-8">
+        <a href="https://wa.me/584247325242" target="_blank" class="btn-secondary">💬 Enviar mensaje por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Embobinados J.C — Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    // Funciones para el modal de imágenes
+    function openModal(img) {
+      document.getElementById("modal").style.display = "block";
+      document.getElementById("modal-img").src = img.src;
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
