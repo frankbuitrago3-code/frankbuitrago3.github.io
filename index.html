@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- ENCABEZADO -->
+  <!-- HEADER -->
   <header>
     <div class="container header-container">
       <nav>
@@ -78,8 +78,8 @@
     <div class="container text-center">
       <h2>Galería de trabajos</h2>
       <div class="gallery-grid">
-        <img src="motor-dañado.jpg" alt="motor dañado" onclick="openModal(this)">
         <img src="motor-reparado.jpg" alt="Motor reparado" onclick="openModal(this)">
+        <img src="motor-dañado.jpg" alt="Motor dañado" onclick="openModal(this)">
         <video controls>
           <source src="video-trabajo.mp4" type="video/mp4">
           Tu navegador no soporta el video.
@@ -121,12 +121,11 @@
   </footer>
 
   <script>
-    // Funciones para el modal de imágenes
+    // Modal para imágenes
     function openModal(img) {
       document.getElementById("modal").style.display = "block";
       document.getElementById("modal-img").src = img.src;
     }
-
     function closeModal() {
       document.getElementById("modal").style.display = "none";
     }
